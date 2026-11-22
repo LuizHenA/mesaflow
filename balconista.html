@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/balconista.css">
+    <script defer src="./JS/balconista.js"></script>
+    <title>MesaFlow - Balconista</title>
+</head>
+
+<body>
+    <header>
+        <h1>MesaFlow</h1>
+        <p>Área do Balconista</p>
+    </header>
+    <nav class="nav">
+        <a href="./balconista.html" class="nav-link ativo">Painel</a>
+        <a href="./cardapio.html" class="nav-link">Cardápio</a>
+    </nav>
+    <main>
+        <section class="mesas">
+            <h2>Mesas</h2>
+            <article class="mesa-card disponivel" data-mesa="1" data-status="Disponível">
+                <div class="mesa-topo">
+                    <h3>Mesa 1</h3>
+                    <span class="status-mesa">Disponível</span>
+                </div>
+                <div class="mesa-info">
+                    <p class="cliente-mesa">Nenhum cliente</p>
+                    <span class="status-pedido sem-pedido">Sem pedidos</span>
+                </div>
+                <button class="btn-ativar" type="button">Ativar Mesa</button>
+            </article>
+
+            <article class="mesa-card disponivel" data-mesa="2" data-status="Disponível">
+                <div class="mesa-topo">
+                    <h3>Mesa 2</h3>
+                    <span class="status-mesa">Disponível</span>
+                </div>
+                <div class="mesa-info">
+                    <p class="cliente-mesa">Nenhum cliente</p>
+                    <span class="status-pedido sem-pedido">Sem pedidos</span>
+                </div>
+                <button class="btn-ativar" type="button">Ativar Mesa</button>
+            </article>
+
+            <article class="mesa-card disponivel" data-mesa="3" data-status="Disponível">
+                <div class="mesa-topo">
+                    <h3>Mesa 3</h3>
+                    <span class="status-mesa">Disponível</span>
+                </div>
+                <div class="mesa-info">
+                    <p class="cliente-mesa">Nenhum cliente</p>
+                    <span class="status-pedido sem-pedido">Sem pedidos</span>
+                </div>
+                <button class="btn-ativar" type="button">Ativar Mesa</button>
+            </article>
+
+            <article class="mesa-card disponivel" data-mesa="4" data-status="Disponível">
+                <div class="mesa-topo">
+                    <h3>Mesa 4</h3>
+                    <span class="status-mesa">Disponível</span>
+                </div>
+                <div class="mesa-info">
+                    <p class="cliente-mesa">Nenhum cliente</p>
+                    <span class="status-pedido sem-pedido">Sem pedidos</span>
+                </div>
+                <button class="btn-ativar" type="button">Ativar Mesa</button>
+            </article>
+
+            <article class="mesa-card disponivel" data-mesa="5" data-status="Disponível">
+                <div class="mesa-topo">
+                    <h3>Mesa 5</h3>
+                    <span class="status-mesa">Disponível</span>
+                </div>
+                <div class="mesa-info">
+                    <p class="cliente-mesa">Nenhum cliente</p>
+                    <span class="status-pedido sem-pedido">Sem pedidos</span>
+                </div>
+                <button class="btn-ativar" type="button">Ativar Mesa</button>
+            </article>
+
+            <article class="mesa-card disponivel" data-mesa="6" data-status="Disponível">
+                <div class="mesa-topo">
+                    <h3>Mesa 6</h3>
+                    <span class="status-mesa">Disponível</span>
+                </div>
+                <div class="mesa-info">
+                    <p class="cliente-mesa">Nenhum cliente</p>
+                    <span class="status-pedido sem-pedido">Sem pedidos</span>
+                </div>
+                <button class="btn-ativar" type="button">Ativar Mesa</button>
+            </article>
+        </section>
+        <section class="pedidos">
+            <h2>Pedidos</h2>
+
+            <article class="pedido">
+
+                <h3>Mesa 2</h3>
+                <p>Cliente: Carlos</p>
+                <p>Pedido #001</p>
+
+                <ul>
+                    <li>2x Hambúrguer</li>
+                    <li>1x Refrigerante</li>
+                </ul>
+
+                <p class="pedido-total">Total: R$ 35,00</p>
+
+                <span class="status-pedido em-andamento">
+                    Em andamento
+                </span>
+
+            </article>
+        </section>
+    </main>
+
+    <dialog id="modal-dialog">
+
+        <h2>Ativar Mesa</h2>
+
+        <label for="nome-cliente">
+            Nome do cliente:
+        </label>
+
+        <input type="text" id="nome-cliente" placeholder="Digite o nome">
+
+        <button type="button" id="confirmar-ativacao">Ativar</button>
+
+        <button type="button" id="cancelar-ativacao">Cancelar</button>
+
+    </dialog>
+
+
+    <dialog id="modal-mesa">
+
+        <h2 id="detalhe-titulo">Mesa</h2>
+
+        <p id="detalhe-status">Status:</p>
+        <p id="detalhe-cliente">Cliente:</p>
+        <p id="detalhe-pedido">Pedido:</p>
+
+        <button type="button" id="desativar-mesa">
+            Desativar Mesa
+        </button>
+
+        <button type="button" id="fechar-detalhes">
+            Fechar
+        </button>
+
+    </dialog>
+</body>
+
+</html>
