@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/categoria.css">
+    <script type="module" src="./JS/categoria.js"></script>
+    <title>MesaFlow - Cardápio</title>
+</head>
+
+<body>
+    <header>
+        <h1>MesaFlow</h1>
+        <p>Gerenciamento de Categoria</p>
+    </header>
+
+    <nav>
+        <a href="./balconista.html">Painel</a>
+        <a href="./cardapio.html">Cardápio</a>
+    </nav>
+
+    <main>
+        <div class="topo-categoria">
+            <div>
+                <a href="./cardapio.html" class="voltar">← Voltar ao cardápio</a>
+                <h2 id="titulo-categoria">Categoria</h2>
+                <p id="descricao-categoria">Produtos desta categoria.</p>
+            </div>
+            <button type="button" id="btn-adicionar" class="btn-principal">+ Adicionar produto</button>
+        </div>
+
+        <div class="barra-pesquisa">
+            <input type="search" id="pesquisa-produtos" placeholder="Pesquisar nesta categoria...">
+        </div>
+
+        <section class="grade-produtos" id="lista-produtos">
+            <!-- Produtos gerados pelo JavaScript -->
+        </section>
+    </main>
+
+    <dialog id="modal-produto" class="modal">
+        <form id="form-produto">
+            <div class="modal-cabecalho">
+                <h2 id="titulo-modal-produto">Adicionar produto</h2>
+                <button type="button" class="btn-fechar" data-fechar="modal-produto" aria-label="Fechar">×</button>
+            </div>
+
+            <label for="produto-nome">Nome</label>
+            <input id="produto-nome" name="nome" type="text" required>
+
+            <label for="produto-categorias">Categorias</label>
+            <select id="produto-categorias" name="categorias" multiple size="5" required>
+                <!-- Opções preenchidas pelo JavaScript -->
+            </select>
+            <small>Selecione uma ou mais categorias. Para selecionar várias, mantenha Ctrl (ou Command no Mac) pressionado.</small>
+
+            <label for="produto-descricao">Descrição</label>
+            <textarea id="produto-descricao" name="descricao" rows="3"></textarea>
+
+            <div class="campos-duplos">
+                <div>
+                    <label for="produto-preco">Preço (R$)</label>
+                    <input id="produto-preco" name="preco" type="number" min="0" step="0.01">
+                </div>
+                <div>
+                    <label for="produto-avaliacao">Avaliação (0 a 5)</label>
+                    <input id="produto-avaliacao" name="avaliacao" type="number" min="0" max="5" step="0.1" value="0">
+                </div>
+            </div>
+
+            <label for="produto-imagem">Caminho da imagem</label>
+            <input id="produto-imagem" name="imagem" type="text" placeholder="assets/imagens/...">
+
+            <label class="linha-checkbox">
+                <input id="produto-promocao" name="promocao" type="checkbox">
+                Produto em promoção
+            </label>
+
+            <label for="produto-preco-promocional">Preço promocional (R$)</label>
+            <input id="produto-preco-promocional" name="precoPromocional" type="number" min="0" step="0.01">
+
+            <div class="acoes-modal">
+                <button type="button" class="btn-secundario" data-fechar="modal-produto">Cancelar</button>
+                <button type="submit" class="btn-principal">Salvar produto</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="modal-exclusao" class="modal modal-confirmacao">
+        <h2>Excluir produto</h2>
+        <p>Tem certeza de que deseja excluir este produto?</p>
+        <div class="acoes-modal">
+            <button type="button" class="btn-secundario" data-fechar="modal-exclusao">Cancelar</button>
+            <button type="button" id="btn-confirmar-exclusao" class="btn-perigo">Excluir</button>
+        </div>
+    </dialog>
+</body>
+
+</html>
